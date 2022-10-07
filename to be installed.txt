@@ -1,0 +1,14 @@
+pip install flask
+pip install pymysql
+pip install numpy
+pip install matplotlib
+pip install requests
+pip install nltk
+python
+>>> import nltk
+>>> nltk.download('vader_lexicon')
+
+
+cd <file name> ----> to enter  in folder
+conda activate <env name> ----> to run env
+python <file name> -----> to run file
