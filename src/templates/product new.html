@@ -1,0 +1,65 @@
+{% extends 'userindex.html' %}
+{% block body %}
+
+
+<body>
+<head>
+<style>
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #29487D;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #FEFEFE;}
+#customers tr:nth-child(odd){background-color: #9CB2CE;}
+
+#customers tr:hover {background-color: #D4D8E8;}
+
+#customers th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+  background-color: #29487D;
+  color: white;
+}
+</style>
+</head>
+
+<form id="form1" name="form1" method="post" action="product_add1">
+  <div align="center">
+    <table width="292" border="1" id="customers">
+      <tr>
+        <th width="130">Product Name </th>
+        <td width="146"><label>
+          <input type="text" name="textfield" />
+        </label></td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td><label>
+          <input type="text" name="textfield2" />
+        </label></td>
+      </tr>
+      <tr>
+        <th> Twitter handle </th>
+        <td><label>
+          <input type="text" name="textfield3" />
+        </label></td>
+      </tr>
+      </table>  
+    <label>
+    <input type="submit" class="btn btn-primary" name="Submit" value="Save" />
+    </label>
+  </div>
+  <p align="center">&nbsp;</p>
+  <p>&nbsp;</p>
+</form>
+</body>
+{% endblock %}
+

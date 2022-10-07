@@ -1,0 +1,64 @@
+{% extends 'userindex.html' %}
+{% block body %}
+<head>
+<style>
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 75%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #29487D;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #FEFEFE;}
+#customers tr:nth-child(odd){background-color: #9CB2CE;}
+
+#customers tr:hover {background-color: #D4D8E8;}
+#customers tr{
+  color: #000080;
+  }
+#customers th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+  background-color: #29487D;
+  color: white;
+}
+</style>
+</head>
+
+<body xmlns="http://www.w3.org/1999/html">
+<form id="form1" name="form1" method="post" action="product_add">
+  <div align="center">
+    <table width="446" border="1" id="customers">
+      <tr>
+        <th width="101"><font color="white">Product Name</font></th>
+        <th width="69"><font color="white">Description</font></th>
+        <th width="92"><font color="white">Twitter handle</font></th>
+        <th width="92">&nbsp;</th>
+      </tr>
+      <tr>
+        {% for i in val%}
+      </tr>
+      <tr>
+        <td>&nbsp;{{i[1]}}</td>
+        <td>&nbsp;{{i[3]}}</td>
+        <td>&nbsp;{{i[2]}}</td>
+        <td><p><a href="{{url_for('delete',id=i[0])}}"><font color="red">Delete</a></p>
+          <p><a href="{{url_for('search',id=i[0])}}"><font color="blue">Search</font></a></p></td>
+      </tr>
+      {% endfor %}
+      </table>
+    <p>
+      <label><font color="white">
+      <input type="submit" class="btn btn-success" name="Submit" value="Add New" />
+      </label>
+    </p>
+  </div>
+
+</form>
+</body>
+{% endblock %}

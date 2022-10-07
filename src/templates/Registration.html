@@ -1,0 +1,102 @@
+{% extends 'signupindex.html' %}
+{% block body %}
+<body>
+<head>
+<style>
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #29487D;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #FEFEFE;}
+#customers tr:nth-child(odd){background-color: #9CB2CE;}
+
+#customers tr:hover {background-color: #D4D8E8;}
+#customers tr{
+  color:#000080;
+  }
+
+#customers th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+  background-color: #29487D;
+  color: white;
+}
+</style>
+</head>
+<form id="form1" name="form1" method="post" action="Registration1">
+  <table width="200" border="1" id="customers" align="center">
+    <tr>
+
+
+      <td>Username</td>
+      <td><label>
+        <input type="text" name="textfield" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Housename</td>
+      <td><label>
+        <input type="text" name="textfield2" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Place</td>
+      <td><label>
+        <input type="text" name="textfield3" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Post</td>
+      <td><label>
+        <input type="text" name="textfield4" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Pin</td>
+      <td><label>
+        <input type="text" name="textfield5" required pattern="[0-9]{6}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Mob Number </td>
+      <td><label>
+        <input type="text" name="textfield6" required pattern="[6789][0-9]{9}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Email-id</td>
+      <td><label>
+        <input type="text" name="textfield7" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Username</td>
+      <td><label>
+        <input type="text" name="textfield8" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td><label>
+        <input type="text" name="textfield9" required/>
+      </label></td>
+    </tr>
+    <div>
+      <td colspan="2">
+        <div align="center">
+          <input type="submit" class="btn btn-primary" name="Submit" value="Register" required/>
+          </div>
+      </td>
+      </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

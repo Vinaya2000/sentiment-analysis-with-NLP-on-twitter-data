@@ -1,0 +1,52 @@
+{% extends 'userindex.html' %}
+{% block body %}
+
+
+<body>
+<head>
+<style>
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #29487D;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #FEFEFE;}
+#customers tr:nth-child(odd){background-color: #29487D;}
+
+#customers tr:hover {background-color: #29487D;}
+
+#customers th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+  background-color: #000080;
+  color: white;
+}
+</style>
+</head>
+
+<form id="form1" name="form1" method="post" action="send_feedback">
+  <table width="200" border="1" id="customers" align="center">
+    <tr>
+      <td><font color="white"> Feedback</font></td>
+      <td><label><font color="white">
+        <input type="text" name="textfield" required size="45"/></font>
+      </label></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div align="center"><font color="blue">
+          <input type="submit" class="btn btn-primary"  name="Submit" value="Submit" required/>
+          </font></div>
+      </td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

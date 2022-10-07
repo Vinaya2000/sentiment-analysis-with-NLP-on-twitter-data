@@ -1,0 +1,89 @@
+{% extends 'userindex.html' %}
+{% block body %}
+
+
+<body>
+<head>
+<style>
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 30%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #29487D;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #FEFEFE;}
+#customers tr:nth-child(odd){background-color: #9CB2CE;}
+
+#customers tr:hover {background-color: #D4D8E8;}
+#customers tr{
+  color:#000080;
+  }
+
+#customers th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+  background-color: #29487D;
+  color: white;
+}
+
+div {
+
+  padding: 5px;
+}
+
+.img1 {
+  float: right;
+}
+
+.img2 {
+  float: right;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+table
+{
+
+}
+</style>
+</head>
+
+<div class="clearfix" align="left">
+    <img src="../static/graph/{{f}}" width="700" height="400"/>
+</div>
+<div class="clearfix" align="top">
+
+    <table border="1" id="customers">
+
+        <tr>
+            <th>ProductName</th>
+            <th>Positive</th>
+            <th>Negative</th>
+            <th>Neutral</th>
+        </tr>
+
+         <tr>
+
+             <td> {{i[0]}}</td>
+             <td> {{i[1]}}</td>
+             <td> {{i[2]}}</td>
+             <td> {{i[3]}}</td>
+    </tr>
+    </table>
+
+</div>
+
+<!--<form id="form1" name="form1" method="post" action="">-->
+
+
+<!--</form>-->
+</body>
+{% endblock %}

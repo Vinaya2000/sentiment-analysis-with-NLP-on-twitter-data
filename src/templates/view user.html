@@ -1,0 +1,67 @@
+{% extends 'adminindex.html' %}
+{% block body %}
+<body>
+<head>
+<style>
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 75%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #29487D;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #FEFEFE;}
+#customers tr:nth-child(odd){background-color: #9CB2CE;}
+
+#customers tr:hover {background-color: #D4D8E8;}
+#customers tr{
+  color:#000080;
+  }
+
+#customers th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+  background-color: #29487D;
+  color: white;
+}
+</style>
+</head>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1" id="customers" align="center">
+    <tr>
+      <th><font color="white">Username</font></th>
+      <th><font color="white">Housename</font></th>
+      <th><font color="white">Place</font></th>
+      <th><font color="white">Post</font></th>
+      <th><font color="white">Pin</font></th>
+      <th><font color="white">Mob Number </font></th>
+      <th><font color="white">Email-id</font></th>
+      <th><font color="white">Status</font></th>
+      <th><font color="white"></font></th>
+     
+    </tr>
+    {% for i in val%}
+    <tr>
+      <td>&nbsp;{{i[1]}}</td>
+      <td> {{i[2]}}</td>
+      <td>&nbsp;{{i[3]}}</td>
+      <td>&nbsp;{{i[4]}}</td>
+      <td>&nbsp;{{i[5]}}</td>
+      <td>&nbsp;{{i[6]}}</td>
+      <td>&nbsp;{{i[7]}}</td>
+      <td>{{i[12]}}</td>
+    
+     
+      <td><p><a href="{{url_for('blockuser',id=i[8])}}"><font color="red">Block</font></a></p>
+      <p><a href="{{url_for('unblockuser',id=i[8])}}"><font color="green">Unblock</font></a></p></td>
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}

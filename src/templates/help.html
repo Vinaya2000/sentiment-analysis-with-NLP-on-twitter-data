@@ -1,0 +1,44 @@
+{% extends 'index.html' %}
+{% block body %}
+<body>
+<head>
+<style>
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 75%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #29487D;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #FEFEFE;}
+#customers tr:nth-child(odd){background-color: #9CB2CE;}
+
+#customers tr:hover {background-color: #D4D8E8;}
+#customers tr{
+  color:#000080;
+  }
+
+#customers th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+  background-color: #29487D;
+  color: white;
+}
+</style>
+</head>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1" id="customers">
+    <tr>
+      <td><p>Twitter allows businesses to engage personally with consumers. However, there&rsquo;s&nbsp;<a href="https://www.oberlo.com/blog/twitter-statistics" target="_blank" rel="noopener noreferrer">so much data on Twitter</a>&nbsp;that it can be hard for brands to prioritize which tweets or mentions to respond to first.</p>
+        <p>That's why&nbsp;<a href="https://monkeylearn.com/sentiment-analysis/" target="_blank" rel="noopener noreferrer">sentiment analysis</a>&nbsp;has become a key instrument in social media marketing strategies.</p>
+      <p>Sentiment analysis is a tool that automatically monitors emotions in conversations on social media platforms.</p></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

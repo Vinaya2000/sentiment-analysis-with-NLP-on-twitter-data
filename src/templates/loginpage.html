@@ -1,0 +1,65 @@
+{% extends 'index.html' %}
+{% block body %}
+
+<body>
+<head>
+  <style>
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #29487D;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #FEFEFE;}
+#customers tr:nth-child(odd){background-color: #9CB2CE;}
+
+#customers tr:hover {background-color: #D4D8E8;}
+#customers tr{
+  color:#000080;
+  }
+
+#customers th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+  background-color: #29487D;
+  color: white;
+}
+</style>
+
+</head>
+<form id="form1" name="form1" method="post" action="/login">
+  <table width="200" border="1" id="customers" align="center">
+    <tr>
+      <th>username</th>
+      <td>
+        <label>
+        <input type="text" name="textfield" required/>
+        </label>
+      </div></td>
+    </tr>
+    <tr>
+      <th>password</th>
+      <td><label>
+        <input type="password" name="textfield2" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div align="center">
+          <input type="submit"class="btn btn-primary" name="Submit" value="login" required/>
+          </div>
+        <div align="center">
+          <a href="Registration"><font color="blue">Sign Up</font></a></div>
+      </td>
+    </tr>
+  </table>
+  <label></label>
+</form>
+</body>
+{% endblock %}
